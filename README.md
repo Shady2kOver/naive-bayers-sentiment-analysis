@@ -6,6 +6,8 @@ The model was trained on an [IMDB dataset of 50k movie reviews](https://www.kagg
 
 Unlike my last ML project this one has a web-based UI built with Flask so you can test it in real time. 
 
+It showed an accuracy of about 85%.
+
 **Uses:** 
 
  - Python 
