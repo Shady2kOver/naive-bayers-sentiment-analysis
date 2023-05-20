@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sentiment Analysis</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            background-color: #cdedf4;
+        }
+
+        .custom-textarea {
+            background-color: #e7f0f1;
+            border: 2px solid #abd5ff;
+            border-radius: 5px;
+            font-weight: bold; 
+            border-radius: 10px;
+        }
+
+        .happy-icon {
+            color: rgb(95, 164, 95);
+        }
+
+        .sad-icon {
+            color: rgb(212, 76, 76);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="mt-5 text-center">Sentiment Analysis</h1>
+        <div class="row justify-content-center mt-5">
+            <div class="col-md-6">
+                <form method="POST" action="/">
+                    <div class="form-group">
+                        <label for="text">Enter your text:</label>
+                        <textarea class="form-control custom-textarea" id="text" name="text" rows="4" cols="50"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Analyze Sentiment</button>
+                </form>
+                {% if prediction %}
+                <p class="mt-3">Prediction: {{ prediction }}</p>
+                {% if prediction == "Positive" %}
+                <i class="fas fa-smile happy-icon mt-3"></i>
+                {% elif prediction == "Negative" %}
+                <i class="fas fa-frown sad-icon mt-3"></i>
+                {% endif %}
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</body>
+</html>
