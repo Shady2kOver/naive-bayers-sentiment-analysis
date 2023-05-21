@@ -26,7 +26,7 @@ Unlike my last ML project this one has a web-based UI built with Flask so you ca
 
 # Details
 
-## ** Naive Bayes Classifier**:
+##  Naive Bayes Classifier:
 
 **Bayes' theorem** states that the probability of an event A given the occurrence of event B is equal to the probability of event B given event A multiplied by the probability of event A, divided by the probability of event B. 
 
