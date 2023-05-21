@@ -1,4 +1,4 @@
-## Description
+# Description
 
 Sentiment Analyzer predicts the sentiment (positive or negative) for online reviews . It uses the [Naive Bayes algorithm](https://www.javatpoint.com/machine-learning-naive-bayes-classifier) to analyze text input and determine whether it expresses a positive or negative sentiment. 
 
@@ -6,9 +6,7 @@ The model was trained on an [IMDB dataset of 50k movie reviews](https://www.kagg
 
 Unlike my last ML project this one has a web-based UI built with Flask so you can test it in real time. 
 
-It showed an accuracy of about 85%.
-
-**Uses:** 
+## **Uses:**
 
  - Python 
  - Flask (for web app)
@@ -17,7 +15,7 @@ It showed an accuracy of about 85%.
  - NLTK
  - Scikit-Learn
 
-## Usage
+# Usage
 
 1.  Clone the repository: `git clone https://github.com/Shady2kOver/naive-bayers-sentiment-analysis.git`
 2.  Install the required dependencies: `pip install -r requirements.txt`
@@ -26,8 +24,34 @@ It showed an accuracy of about 85%.
 5.  Enter the review text in the provided text area and click the "Analyze Sentiment" button
 6.  The predicted sentiment (positive or negative) will be displayed below the button.
 
-## Details
-**Negation Handling**: An issue (which still isn't efficiently handled) that I faced in this was handling negations, when you tokenize words and omit stop-words you can run into a few problems .
+# Details
+
+## ** Naive Bayes Classifier**:
+
+**Bayes' theorem** states that the probability of an event A given the occurrence of event B is equal to the probability of event B given event A multiplied by the probability of event A, divided by the probability of event B. 
+
+<sub>*Note that this is a simple explanation for 2 events, when considering many events we will take in the total probability in the denominator*</sub>
+
+This can be represented as follows - ![Bayes Theorem](https://miro.medium.com/v2/resize:fit:1400/1*LB-G6WBuswEfpg20FMighA.png)
+
+
+Now this classifier is called **"Naive Bayes"** classifier as it uses bayes theorem with a slight assumption, The classifier assumes that the presence or absence of a particular feature in a class is independent of the presence or absence of any other feature. 
+In other words, it assumes that the features are conditionally independent given the class.
+
+This assumption is considered "naive" because it oversimplifies the relationships between features. In reality, many features are often correlated or dependent on each other to some extent. 
+
+However, despite this simplification, Naive Bayes has been found to work well in many practical applications and can achieve good results, especially when the independence assumption is reasonably satisfied or when the dependencies between features are not critical for accurate classification. Furthermore, it can be easily implemented through the `scikit-learn` library
+
+
+
+
+
+
+
+
+## **Negation Handling**:
+
+An issue (which still isn't efficiently handled) that I faced in this was handling negations, when you tokenize words and omit stop-words you can run into a few problems .
 
 Say there's two reviews as follows :
 
